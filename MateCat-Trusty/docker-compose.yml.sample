@@ -6,7 +6,7 @@ networks:
 
 services:
   filters:
-    build: ./MateCat-Trusty/MateCatFilters/
+    build: ./MateCatFilters/
     container_name: docker_matecat_filter
     ports:
       - 8732:8732
@@ -21,7 +21,7 @@ services:
        - matecat-network
 
   amq:
-    build: ./MateCat-Trusty/AMQ/
+    build: ./AMQ/
     container_name: docker_amq
     ports:
       - 61613:61613
@@ -30,7 +30,7 @@ services:
        - matecat-network
 
   mysql:
-    build: ./MateCat-Trusty/MySQL/
+    build: ./MySQL/
     container_name: docker_mysql
     ports:
      - 3306:3306
@@ -38,7 +38,7 @@ services:
        - matecat-network
 
   matecat:
-    build: ./MateCat-Trusty/MateCatApache/
+    build: ./MateCatApache/
     container_name: docker_matecat
     ## Remove this environment block if you don't need it ##
     environment:
@@ -51,6 +51,7 @@ services:
     volumes:
       - ~/PhpstormProjects/matecat:/var/www/matecat:rw
     ports:
+# docker_ports : machine_ports
       - 80:80
       - 443:443
       - 7788:7788

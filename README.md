@@ -33,7 +33,7 @@ cd /your/preferred/docker_matecat_path
 git clone https://github.com/Ostico/docker_matecat.git
 ```
 
-- Go inside this new directory, copy ```docker-compose.yml.sample``` to ```docker-compose.yml```
+- Go inside this new directory, navigate into Matecat-Trusty and copy ```docker-compose.yml.sample``` to ```docker-compose.yml```
 ```bash
 cp docker-compose.yml.sample docker-compose.yml
 ```
@@ -50,7 +50,7 @@ cp docker-compose.yml.sample docker-compose.yml
 - Configure XDEBUG if you need it or remove it from the environment variables.
 - Configure your SMTP relay host ip/domain and port if you need them or remove from environment variables.
 - Configure the url for your custom filters or remove the key to leave the default [translated-matecat-filters](https://translated-matecat-filters-v1.p.mashape.com)
-- If you remove all keys, you must delete the ```environment:``` also.
+- If you remove all keys, you must delete the ```environment:``` too.
 ```
   ## Remove this environment block if you don't need it ##
   environment:
@@ -62,7 +62,7 @@ cp docker-compose.yml.sample docker-compose.yml
 ```
 
 #### Further MateCat configurations ( Advanced users )
-More specific configurations can be made directly into your ```docker_matecat/MatecatApache/config.ini``` before docker starts the installation.
+More specific configurations can be made directly into your ```docker_matecat/Matecat-Trusty/MatecatApache/config.ini``` before docker starts the installation.
 
 Ex: 
 ```
